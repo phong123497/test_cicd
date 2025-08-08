@@ -1,0 +1,5 @@
+pytest>=7
+pytest-cov>=4
+flake8>=6
+black>=24
+
