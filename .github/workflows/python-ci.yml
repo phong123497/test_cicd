@@ -2,13 +2,7 @@ name: Python CI
 
 on:
   push:
-    paths:
-      - 'test_cicd/**'
-      - '.github/workflows/**'
   pull_request:
-    paths:
-      - 'test_cicd/**'
-      - '.github/workflows/**'
 
 jobs:
   build:
@@ -16,9 +10,6 @@ jobs:
     strategy:
       matrix:
         python-version: ['3.9', '3.10', '3.11', '3.12']
-    defaults:
-      run:
-        working-directory: test_cicd
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
